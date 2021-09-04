@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+    <title>ionicons-v5-a</title>
+    <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" points="262.62 336 342 256 262.62 176" stroke="#f53838"/>
+    <line x1="330.97" x2="170" y1="256" y2="256" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" stroke="#f53838"/>
+    <path fill="none" stroke-miterlimit="10" stroke-width="32" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" stroke="#f53838"/>
+</svg>

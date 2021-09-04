@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
+    
+    <!-- Required Core Stylesheet -->
+    
+
+    <!-- Optional Theme Stylesheet -->
+    <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"> -->
+
+
+    <title>LaslesVPN</title>
+  <script type="module" crossorigin src="/assets/index.174fda8f.js"></script>
+    <link rel="stylesheet" href="/assets/index.29d77533.css">
+  </head>
+
+
+<body class="font-rubik text-gray-800 w-full ">
+    <div class="container px-12 mt-6 mx-auto ">
+        <div class="flex justify-between w-full">
+            <div class=" md:hidden flex items-center font-semibold">
+                <img class="w-6 mr-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAlCAYAAADIgFBEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANqSURBVHgBtZhdUtswEMdXMk2cFmbCCeobNDwwcXipc4JyA+AEbU8QOEHpCUhPQDlB0icyw4t7A98gnoFAwiTZ7iaO61iyHX/wn2EsW9LqJ2m1KwJQUmPbtp5te8BPKCkBJcQANYABFS36814BuoejkQcFVRgmBrJRKaBCMAkgpYFyw2SAlALKBbMjSGGgnWFyghQCkrs0ygJBgGFC11W/XY99JswOK3K1Pxp1l/SEkkCiLMiH0ehy8/Jo25c0u15C28wtE1WBVAEkqgQpCySqBikDJN4CpCiQeCuQnYFM8+hwOPT5JTzatXUHCyoEYR1Qv7RjX395udm8rFbmybbPqXADFYNElbZCBNsl6KEMiHp5QMiwA+kDK/VpK2QE48ugo6Vp09eBPLfbX2kGZ5Au57nT+aYDAsTf8e+UThzmkCDEqc6a1MzixbbPUIhrmuEvSNcQEX9we8WuEN91HQRxSIH4SalBvGvEYsCk0zkliD6XeX8hRfPp1OUnt48DsV1dYpXEwTAthUXKrcbj4+MWLpdJDq7o0HX9TXlJK/lE/bcHwDtlTHIV3qZmvGK5WHghCMWfd1IORKQdnpx8hBSNW61mZOCm2NsbRIGWiJ6mm5V5hdgDOBcx4Mf5/Ci1j2nGV6KJhnEKGWIYT/loGFZoR1/vQLpRxXFFxA45saV0EsKX2sEQv+iMRL6djR1H2V5WcIly4t+j4wgpPys2EV2G+aPp6GxuZquTgehvN8BmbTpV4girtl4VK/59bppuCIuobBk5+l/epqHOaD1ID3wyKLa4mia9+CkJJnCptKTTs0mGtaRoP5/3JccM3bnn1aEY0QvK2jAuDON2s4KRrK9ogdjn52Rt71wD6+4/PLirRLkOxXpDpD7dO67e0UoJjS8E8iAh47PPzeiaUJ/NehSVtVtLk72gS30/vM9M2u3bpNQA/53PgvzykGONJp4F4hx4wYUwzrzOZhe6kxOBsKCYrCQQHu+9aYa5KoRhR6XKbgpQpeJxVuMFjr0Fw+Ikxg10ab5K8YFpkB810i7kUfHtj29mWHx7NBToUxK+2r+/v9ZVZ/7jv7qSriOyo0uq5Jwu+YRLzxY9W1oAqqeg9vOgXh9GtyU3TFQUd6x5sFKUQD3TNP2ocaQUMZlMLEqKTbFY+IZh+I0cP4n8Axa2xF1zBuwJAAAAAElFTkSuQmCC" alt="logo">
+                <span>Lasles<b>VPN</b></span>
+
+            </div>
+            <div id="burger" class="md:hidden flex justify-end cursor-pointer  ">
+                <img src="/assets/menu.15b5a790.svg" alt="">
+            </div>
+        </div>
+        <nav class=" md:h-10 flex text-sm justify-center md:justify-between ">
+
+            <div id="menu" class="md:w-full md:flex md:justify-between md:items-center md:h-8 h-40 hidden text-center">
+
+                <div class=" hidden md:flex items-center font-semibold">
+                    <img class="w-6 mr-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAlCAYAAADIgFBEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANqSURBVHgBtZhdUtswEMdXMk2cFmbCCeobNDwwcXipc4JyA+AEbU8QOEHpCUhPQDlB0icyw4t7A98gnoFAwiTZ7iaO61iyHX/wn2EsW9LqJ2m1KwJQUmPbtp5te8BPKCkBJcQANYABFS36814BuoejkQcFVRgmBrJRKaBCMAkgpYFyw2SAlALKBbMjSGGgnWFyghQCkrs0ygJBgGFC11W/XY99JswOK3K1Pxp1l/SEkkCiLMiH0ehy8/Jo25c0u15C28wtE1WBVAEkqgQpCySqBikDJN4CpCiQeCuQnYFM8+hwOPT5JTzatXUHCyoEYR1Qv7RjX395udm8rFbmybbPqXADFYNElbZCBNsl6KEMiHp5QMiwA+kDK/VpK2QE48ugo6Vp09eBPLfbX2kGZ5Au57nT+aYDAsTf8e+UThzmkCDEqc6a1MzixbbPUIhrmuEvSNcQEX9we8WuEN91HQRxSIH4SalBvGvEYsCk0zkliD6XeX8hRfPp1OUnt48DsV1dYpXEwTAthUXKrcbj4+MWLpdJDq7o0HX9TXlJK/lE/bcHwDtlTHIV3qZmvGK5WHghCMWfd1IORKQdnpx8hBSNW61mZOCm2NsbRIGWiJ6mm5V5hdgDOBcx4Mf5/Ci1j2nGV6KJhnEKGWIYT/loGFZoR1/vQLpRxXFFxA45saV0EsKX2sEQv+iMRL6djR1H2V5WcIly4t+j4wgpPys2EV2G+aPp6GxuZquTgehvN8BmbTpV4girtl4VK/59bppuCIuobBk5+l/epqHOaD1ID3wyKLa4mia9+CkJJnCptKTTs0mGtaRoP5/3JccM3bnn1aEY0QvK2jAuDON2s4KRrK9ogdjn52Rt71wD6+4/PLirRLkOxXpDpD7dO67e0UoJjS8E8iAh47PPzeiaUJ/NehSVtVtLk72gS30/vM9M2u3bpNQA/53PgvzykGONJp4F4hx4wYUwzrzOZhe6kxOBsKCYrCQQHu+9aYa5KoRhR6XKbgpQpeJxVuMFjr0Fw+Ikxg10ab5K8YFpkB810i7kUfHtj29mWHx7NBToUxK+2r+/v9ZVZ/7jv7qSriOyo0uq5Jwu+YRLzxY9W1oAqqeg9vOgXh9GtyU3TFQUd6x5sFKUQD3TNP2ocaQUMZlMLEqKTbFY+IZh+I0cP4n8Axa2xF1zBuwJAAAAAElFTkSuQmCC" alt="logo">
+                    <span>Lasles<b>VPN</b></span>
+                </div>
+                <div class="mb-4 md:mb-0">
+                    <ul class="md:flex md:space-x-7 md:space-y-0 space-y-4">
+                        <li>About</li>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Testimonies</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+                <div class="md:flex  md:space-x-4">
+                    <button class="  px-8 md:px-0 py-1.5 text-xs  rounded-2xl   font-bold  ">Sign In</button>
+                    <button class="  text-red-550 px-8 py-1.5 text-xs  rounded-2xl   font-bold border-2 border-red-550">
+                        Sign Up</button>
+                </div>
+
+            </div>
+        </nav>
+
+        <header class="m-10 mb-16 ">
+            <div class=" flex flex-col-reverse lg:flex-row  w-full pb-5 items-center">
+
+                <div class="text-center items-center ">
+                    <h1 class="text-2xl font-medium py-3">
+                        Want anything to be easy <br> with Lasles<b>VPN.</b>
+                    </h1>
+                    <p class="text-xs font-light">Provide a network for all your needs with ease and fun using
+                        <b>LaslesVPN</b> discover interesting features from us.</p>
+                    <div class="py-6">
+                        <button class="bg-red-550 px-10 py-2 text-xs  rounded-md shadow-md text-white font-medium">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="/assets/Illustration-1.22c9b19f.png" alt="">
+                </div>
+            </div>
+            <div class=" pb-6 grid grid-cols-3 mx-auto shadow-xl">
+                <div class=" mx-auto text-center">
+                    <img class="md:float-left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA4CAYAAABZjWCTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQuSURBVHgB5Zo9TCJBFMffDB9XnCaY+BGrE3ujdnZitNdrbeQKrbU3URN7tdVCbWyNvca10k6MvXiVETESo8WxLHPvzXLIxyILOwOs90uW/QTmv2/em6/HQDEimYxAd3cMhBgDxn7gNoaXI3ITIoLnGTzO4PF9YX+DewPe3hIsGs2AQhgoQArq6opjwWfxNAbNY0A+fwiWZbDBwXvwiCdx4ukphoLWwJugWhyAaW54EdmUOPHwMASh0D7oEVVJ0yI5NIh4fl5DYUlojTAiTv8n/7dBXFtOWiscPpaBol0wdg/Z7JRbK7qynPStcPi6rcJkQQS94HNZHhfUFSfS6QV8Y+cyjHcCJBDLI8tVh0+rZeEHDqBzibPe3sNaN2uKK4T5c+h0hJhifX2G0y3HaimDB+f74AcYO5bldcDZ59BpZd32BxEZxR2oEifbE/8Is8Eojm60Xnm5zOcKPY8k+BXTjJa2geWWC4Ua7gV0FHaXsEjRcr6JjvUoiZ4flmOsbqPoC+xRin1IH773tUoCgR7W05OxLRcMzsFXIpdbpl1QnnC+gHUVdJG/vQXz5ATyd3fABgbg2+IisOFh0AZjk3Knu0rmrq4gu7lZdT28ugrBiQnQBlZNjsK0DmNyu7uO180a15VhmnPkczHQhHh/h3wq5XwPr4sa95TA+RiJG4U2wfr7QRvYheTofNoGoez7dwhOTzveC87MgFY4H+W6O8mhpSUIVAQOPjICIYyYWsGZA4ajbX1tQAkWNgfkYzwaBa6zGSihZeLaQRBaAEVNeHyUe/JD1iLLkThafNASVKhnkj06AoE9EymwBPLD8Py8TqEZhiPvpI6gkt3bgxx2ueoRnJ2FsI7gwliComUCFJPd2nIljKDn/mxvg3KEkKOC36AQE6th7uysoe9Yp6euX0YD3JA4ZZajUE/imoG+V+mXHjE4djANUAQNaZqFhFmXl6AM00xwOVtEqycqwDDvBdbVBUrAYEK67JE4LdUqIEDdKgzvDZcFXwpFzICq8Z0QF/J35bHiAav0nUb8hxp2j1YvozB/+TG1l07TtF4M/I+BKz9TdPAxtSfEBnwFSnSUT6f733pFqxHl0+l+t55p/io9LRNXmIbeAX+yU5kIULWyKl5eItg0XPtqGYva6dfX8cr0qqr1OZqGBsv6CfZQqPOhXDJK33DIG3NcWcVZqQRabwX8gGWt1MpLqZmqgQIPOj7AYPlkOWtQN4NILseWLAt1DCSsr2/9s0dcpUehwGUUuAWdAPkYVcVPLFZ8FFxSyP1qb5YDRUUMdjImuMB11p50Ws7HoX3t4I4M9y6FEc3nW7bOikbBvwxoEG+ZsqlUXC5c6umPNi3qH2pynMmSgcA6bpOerEk+ZQ+cDS+iij8HikFr0mKmveFKCxZ4yFGwPbVBke8Cn0vQXI6KpO3/hr9O/MdcI4fJkgAAAABJRU5ErkJggg==" alt="">
+                    <h3>90+</h3>
+                    <p>Users</p>
+                </div>
+                <div class=" mx-auto text-center ">
+                    <img class="md:float-left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASwSURBVHgB5Zo7TxtBEMdn93whUgAZ8ZCoYuhRSEcXI+idtDQBJOqYkgqQkKADWigwDS3wARBORRlH9ECHxEMgHorA3F1m9nzmHvb5tWt8yU86nx97t/v3zM7u7Q4DBVgXF8PAWBLffsRzAo9h+wcrIc6MneHrLX6mI4fHb/ycY319OZAMA0lYl5dJPKWA80lscBzqgYRbVhaPbdbbmwUJNCTQOj2NQ2fnD3ybrltUOUisYSyiVTPQAHULtK6vSdiCdGF+GhRas0DRvzRtC4UNQzMhoc/Po6y//6yWy3gthYXVOP/VdHGicgxQun6KbZiv5bKqLFjoa6tYySS0Aoyt4R+9yLq6bisWrVSgIO7wTawWBmM5FDlaSWSowJYV51CFyPA+2NGx27LiCGqbYeyGFSkrsNCZk9D6JLGtq+V+LOmiOBRMoum3IFp8Yz09e/4vAwKt8/MEvHt3WJw3RodbHJ8H/P0x6KK6Ph9BcUQc+2PAVT0WFNbDwRSijGWNuifqXgvqetT6XRDGPDOdogX/Ces5uKwYK35JfU9VfY+PYJ2cgIkHwQcHgQ8NgTIY+4qvWfG22IirqxugjiqZ/M4OvOzvC5GeNvT1QWx8HPSJCVBAMaIKgSiOFO+CREjQ09xc0WrlYGjN98vLwD58AKkU3NQJMimQTH5jo6I40Q4s87S0BNKx3bQQRZ1FIUm8HByIw1MfWohcMjY2Bhzd0415fAwGHlJhTBgtZt3c0AApVaBxdOT5TEGlzeWGOBUUVnNb2MB+qskMPDhZIW0cXl6kPy2YPmu0pdOePkYBRp+Z8ZSRbkEin09wNKX0yBmImGhBP35r+a+RxDBXMe/0R0SrRLDxByDpUVTclMUpyEi3oN9iT5ubgTI0PoZdI4l4DBSgp1Lw5OpT1Cf/TE+LKEquaGIQMjHQuKHoqgIlArWRETEVcwcbipx+qzk4sxoVkItWXHqrh7bZ2arLvl9ZAUXcUhRVIlAMBVXMM6kM8w388hrBzjiYpvQtK4cY9kUe0vhq/4S6we05jo9JZ6AICv16iKsqdE2bWCzHxSKNvSGpBBrQyZKBuvE7Za5J4KIwabMn24bxExRCbuh2VeGaKekPMF5o5xicpwnOs6AQv6sqDSyv7NOLLVDTaMFUSTR1IFel8VE8Mika87wValk6vS5ZXFxk0JLfQSFiQo1HE6yXwVXuKXrzumzIWAYUQ67aBHHU/7aLdXq+v7o6hGhsuISRReuNOh+8C7+WtQhRx6fBI7CwWJqF6JLx59cEN1/yeeqcSiOqEmhOnc8HPDAgUKRpRNFVTXOxVIpJ2T16DDgZPCkdNiSyjoElXeqH8nv0mpYWm/ytDrXx/n6h7M9h17b8bm8V2U+V82RaVWSVqV0VU7nEDfBGLeauWbi7+1xN3lpNyXjW5eWCfwf1DSgbUEpRe7YhJb5SikmzXZZc0jSnak2UrSnbUNSDFbDu7oGmjZU0gFNd5JJ1ZAE3lvFLAUjTFvD4It2iJMw01+HhYY0NDNQ9s5KXs21nR9HEIAn1YluLgtk2jm17jQgr3hIkIzIU29tpSy6JDf4ksu4BEoHUZ3s91sm6pzWhHForJ0PUf8VfCYvd4/GXyv8AAAAASUVORK5CYII=" alt="">
+                    <h3>30+</h3>
+                    <p>Location</p>
+                </div>
+                <div class=" mx-auto text-center ">
+                    <img class="md:float-left" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA4CAYAAABZjWCTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPaSURBVHgB5Zq9TuNAEMdn106uAKQgESSqA3oEdHRnJHq4J7gcTxCegFBRnngCoKHlBZAwFSVB9ISrkEIiIgQ6CePszaxNyIdNnOzi2PCTHGcTK9m/Z3d2PDsMNCMqlRxMTFggxBIw9h2PJfw4Jw8hcthu4PsGvr/xz5d4tuHxsczm5hqgEQYakILGxwvY8XVsWjA8NjSbh+C6NpuZuQFFlMSJuzsLBW2DmqAwDsBxdlREDiVO3N7OQiazDx8jqpuhRXIYEFGvb6OwCsQjjCjQ/8n/HZDIlpPWymaPpaMYFYzdwPPzalQrRrKcnFvZ7MVIhcmOCLrBp7I/EegrTtRqv/COnUo3ngRIIPZH9qsP7w5L/wcOILkU2NTUYdiXoeJ8N38KSUeIVZbP20FfBQ5L6Tw434c0wNix7G8AwXMOJ60c2+kgJ714AD3i5HqSHmEe6MVxGpW6P+6Yc37kUYG04jhz7Wtgp+UymYGjgEThhYQtWpZLjXfsR5v3fLMcY30XxVTgPaV4b+kl9XOtG8OYZJOTDVM2THMDFGleX0Pz6grE0xOoYK6tAZueBiVeXor4WvIsV68rBcWiWoV/m5ugi2+7u2AsLIACNoZlq1wOScVo/+XkBHRCI0ARS9zf5zjOtVgfY9jYmDf08BzU1objbJC3tCBGzPV1yBaLYKCgoLY2OF8ih7IIMfI6hJvn54FtbWAIaeK6QPlEiAtyPs7RUWhbG5wvch1BMlfzbD0YKyugDGYOGD5tazGbix5Og5eTN8rQdLO0iUsiJmgiURGKD1nuHryNiqFJYIRCNLi/66JEAiMUmcAlb1mGGIktQhGiQRHKX4iR2CIUgEtyKLFaLrYIBZ8MTAwwbQyeIS5ii1Acp8xltoh2TxRIXITCWJl0eescbdW25R4G7gyKI/etK0Lh8/OghBBndPqcORQ/fymzX34i04bPQatY4C21J8QOfAbadHSm02s1SspakF5kYui10ZlOT7v1HOd3e7NDnJ+G3oN0stddCNCzs0opMVwaLlK1jUXr9MPDcnd5Vc/+HKWhwXV/AtVlpQF6qqHyjYC6scCdVXxYLKP1tiANuO5WWF1KaKkGCjxIvIPB/sl+htC3gkhuxyqEZh8GCcvnS+9dEqk8CgUWUeAfSAI0x2govmOx1qUQEb/2a7RVDuQV0dlJnxCByFV7ctJyvgyjWwf3pLuPKIwYvt4yPiva/vyyYUDUKmWr1QJak/bSLdDP0KJe0VPjTJY0jBIeP5SsSXOKHpwpAFYQ1fo50AxakzYzvQN3WrDDs4GCvdQGeb4zvK5MuRwdRdtfhv9rEsjUBqd6JwAAAABJRU5ErkJggg==" alt="">
+                    <h3>50++</h3>
+                    <p>Servers</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class=" md:bg-none md:text-gray-800 bg-2nd-hero-texture bg-auto bg-no-repeat text-white  md:flex 
+                    flex content-center items-center shadow-sm rounded-lg py-10">
+                    <div class="hidden md:block  ">
+                        <img class="  " src="/assets/Illustration-2.8085a87a.png" alt="">
+                    </div>
+                    <div>
+                        <div class="w-3/4  m-auto  text-center ">
+                            <h2 class="capitalize text-2xl font-semibold pb-4">we provide many <br> featured you can use
+                            </h2>
+                            <p class="pb-4 text-sm">
+                                You can explore the features that we provide with fun and have their own functions each
+                                feature.
+                            </p>
+                            <div class=" flex justify-center">
+                                <div class="space-y-4">
+                                    <div class="flex">
+                                        <img class="h-3.5 pr-2" src="/assets/check-circle.9b1e9c7d.svg" alt="">
+                                        <p class="text-xs">Powerful online protection</p>
+                                    </div>
+                                    <div class="flex">
+                                        <img class="h-3.5 pr-2" src="/assets/check-circle.9b1e9c7d.svg" alt="">
+                                        <p class="text-xs">Powerful online protection</p>
+                                    </div>
+                                    <div class="flex">
+                                        <img class="h-3.5 pr-2" src="/assets/check-circle.9b1e9c7d.svg" alt="">
+                                        <p class="text-xs">Powerful online protection</p>
+                                    </div>
+                                    <div class="flex">
+                                        <img class="h-3.5 pr-2" src="/assets/check-circle.9b1e9c7d.svg" alt="">
+                                        <p class="text-xs">Powerful online protection</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class=" my-16">
+                    <div class="text-center space-y-4 mb-12 ">
+                        <h2 class="font-semibold tracking-wide text-xl">
+                            Choose Your Plan
+                        </h2>
+                        <p class="text-sm mx-16">
+                            Let's choose the package that is best your you and explore it happily and cheerfully.
+                        </p>
+                    </div>
+                    <div class="md:grid md:grid-cols-3 md:gap-6 ">
+
+                        <!-- FREE PLAN -->
+
+                        <div class="text-center border border-gray-300 rounded-lg shadow md:h-box-hh  pt-16 ">
+                            <img class="mx-auto" src="/assets/Free.6ba5f702.png" alt="">
+                            <h6 class="py-10"><b>Free Plan</b></h6>
+                            <div class=" space-y-3 mx-auto px-1 w-52 text-sm md:h-56  ">
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src=" img/icon/checkmark-sharp.svg" alt="">
+                                    <p>Unlimited Bandwitch</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Encrypted Connection</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>No Traffic Log</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Works on All Devices</p>
+                                </div>
+                            </div>
+                            <p class="pt-16 md:pt-0 text-xl"> <b>Free</b></p>
+                            <div class="py-10">
+                                <button
+                                    class="text-red-550 px-12 py-1.5 text-xs  rounded-2xl shadow-md  font-medium border-2 border-red-550 ">
+                                    Select
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- STANDARD PLAN -->
+
+
+                        <div class=" text-center border border-gray-300 rounded-lg shadow md:h-box-hh pt-16">
+                            <img class="mx-auto" src="/assets/Standard.1f985d7d.png" alt="">
+                            <h6 class="py-10"><b>Standard plan</b></h6>
+                            <div class=" space-y-3 mx-auto px-1 w-52 text-sm md:h-56  ">
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Unlimited Bandwitch</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Encrypted Connection</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Yes Traffic Log</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Works on All Devices</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Connect Anywhere</p>
+                                </div>
+                            </div>
+                            <p class="pt-16 md:pt-0 text-xl"> <b>$9</b> / mo </p>
+                            <div class="py-10">
+                                <button
+                                    class="text-red-550 px-12 py-1.5 text-xs  rounded-2xl shadow-md  font-medium border-2 border-red-550">
+                                    Select
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- PREMIUM PLAN -->
+
+                        <div class=" text-center border border-red-550 rounded-lg shadow md:h-box-hh pt-16">
+                            <img class="mx-auto" src="/assets/Premium.63f6b40b.png" alt="">
+                            <h6 class="py-10"><b>Premium plan</b></h6>
+                            <div class=" space-y-3 mx-auto px-1 w-52 text-sm md:h-56  ">
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Unlimited Bandwitch</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Encrypted Connection</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Yes Traffic Log</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Works on All Devices</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Connect Anywhere</p>
+                                </div>
+                                <div class="flex">
+                                    <img class="w-5 mr-9" src="/assets/checkmark-sharp.2ee3121d.svg" alt="">
+                                    <p>Get New Features</p>
+                                </div>
+                            </div>
+                            <p class="pt-16 md:pt-0 text-xl"> <b>$12</b> / mo </p>
+                            <div class="py-10">
+                                <button
+                                    class="text-white px-12 py-1.5 text-xs  rounded-2xl shadow-md  font-medium bg-red-550 border-2 border-red-550">
+                                    Select
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="mb-16">
+                    <div class="text-center">
+                        <h2 class=" text-xl font-bold">
+                            Huge Global Network of Fast VPN
+                        </h2>
+                        <p class="text-sm py-5 mb-12 mx-10">
+                            See <b>LaslesVPN</b> everywhere to make it easier for you when you move location.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/Huge-Global.938a2b11.png" alt="">
+                    </div>
+                    <div class="grid grid-cols-5 mt-12">
+                        <img src="data:image/png;base64,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" alt="">
+                        <img src="data:image/png;base64,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" alt="">
+                        <img src="data:image/png;base64,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" alt="">
+                        <img src="data:image/png;base64,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" alt="">
+                        <img src="data:image/png;base64,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" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="text-center ">
+                    <h2 class="font-bold text-xl pb-4">Trusted by Thousands of Happy Customer</h2>
+                    <p class="text-sm pb-10">
+                        These are the stories of our customers who ave joined us with great pleasure whe using this
+                        crazy
+                        feature.
+                    </p>
+                    <div class="glide ">
+                        <div class="glide__track mb-10" data-glide-el="track">
+                            <ul class="glide__slides  ">
+                                <li class="glide__slide px-4 ">
+                                    <div class="border-2 rounded-lg h-52 border-red-550 ">
+                                        <div class=" p-6 text-sm">
+                                            <div class="grid grid-cols-5">
+                                                <img src="/assets/Ellipse-175.f00ff8f3.png" alt="">
+                                                <div class="col-span-3 text-left my-auto ml-3">
+                                                    <h5 class="font-bold">Viezh Robert</h5>
+                                                    <h3>Warsaw, Poland</h3>
+                                                </div>
+                                                <div class="my-auto flex">
+                                                    <p>4.5 </p>
+                                                    <img class="w-4 pb-0.5 ml-3" src="/assets/star.12ad1332.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="pt-4">
+                                                <p>
+                                                    "Wow... I am very happy to use this VPN, it turned out to be more
+                                                    than my
+                                                    expectations and so far there have en no problems. LaslesVPN is
+                                                    always the
+                                                    best."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="glide__slide px-4 ">
+                                    <div class="border-2 rounded-lg h-52 border-red-550 ">
+                                        <div class=" p-6 text-sm">
+                                            <div class="grid grid-cols-5">
+                                                <img src="/assets/Ellipse-175-1.e9f0a365.png" alt="">
+                                                <div class="col-span-3 text-left my-auto ml-3">
+                                                    <h5 class="font-bold">Yessica Christy</h5>
+                                                    <h3>Shanxi, China</h3>
+                                                </div>
+                                                <div class="my-auto flex">
+                                                    <p>4.5 </p>
+                                                    <img class="w-4 pb-0.5 ml-3" src="/assets/star.12ad1332.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="pt-4">
+                                                <p>
+                                                    "I like it because I like to travel far and still can connect with
+                                                    high speed."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="glide__slide px-4 ">
+                                    <div class="border-2 rounded-lg h-52 border-red-550 ">
+                                        <div class=" p-6 text-sm">
+                                            <div class="grid grid-cols-5">
+                                                <img src="/assets/Ellipse-175-2.e57e362a.png" alt="">
+                                                <div class="col-span-3 text-left my-auto ml-3">
+                                                    <h5 class="font-bold">Kim Young Jou</h5>
+                                                    <h3>Seoul, South Korea</h3>
+                                                </div>
+                                                <div class="my-auto flex">
+                                                    <p>5.5 </p>
+                                                    <img class="w-4 pb-0.5 ml-3" src="/assets/star.12ad1332.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="pt-4">
+                                                <p>
+                                                    "This is very unusual for my business that currently requires a
+                                                    virtual private network that has high security."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="glide__slide px-4 ">
+                                    <div class="border-2 rounded-lg h-52 border-red-550 ">
+                                        <div class=" p-6 text-sm">
+                                            <div class="grid grid-cols-5">
+                                                <img class="rounded-full" src="/assets/Ellipse-175-3.af8533ab.png" alt="">
+                                                <div class="col-span-3 text-left my-auto ml-3">
+                                                    <h5 class="font-bold">Janet Anderson</h5>
+                                                    <h3>Maryland, USA</h3>
+                                                </div>
+                                                <div class="my-auto flex">
+                                                    <p>4.5 </p>
+                                                    <img class="w-4 pb-0.5 ml-3" src="/assets/star.12ad1332.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="pt-4">
+                                                <p>
+                                                    "I like it because I like to travel far and still can connect with
+                                                    high speed. and i enjoy the best internet anywhere i travel to."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex justify-between px-4">
+                            <div>
+                                <div class="glide__bullets " data-glide-el="controls[nav]">
+                                    <button class="glide__bullet border-4 rounded  border-red-550"
+                                        data-glide-dir="=0"></button>
+                                    <button class="glide__bullet  border-4 rounded border-red-550 "
+                                        data-glide-dir="=1"></button>
+                                    <button class="glide__bullet  border-4 rounded  border-red-550"
+                                        data-glide-dir="=2"></button>
+                                </div>
+                            </div>
+
+
+
+                            <div class="glide__arrows flex " data-glide-el="controls">
+
+                                <button class=" lide__arrow glide__arrow--left " data-glide-dir="<">
+                                    <img class="  " src="/assets/arrow-back-circle.c9ef29f0.svg" alt="">
+                                </button>
+                                <button class="glide__arrow glide__arrow--right " data-glide-dir=">">
+                                    <img class=" " src="/assets/arrow-forward-circle.0d38761d.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div
+                    class=" w-4/5 mx-auto mt-12 h-32 bg-white text-center flex justify-center items-center flex-col  md:flex-row shadow-xl rounded-lg">
+                    <div class="md:flex md:justify-between  w-full px-6">
+                        <div class="md:text-left">
+                            <h3 class="text-2xl font-medium">Subscribe Now to <span class="md:block">
+                                    Get Special Features!
+                                </span>
+                            </h3>
+                            <p class="text-sm">Let's subscribe with us and find the fun</p>
+                        </div>
+                        <div class="md:float-right pt-3 ">
+                            <button class="bg-red-550 px-11 py-2 text-xs  rounded-md shadow-md text-white font-medium">
+                                Subscribe Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class=" py-12 bg-gray-100 px-6 ">
+            <div class="md:grid md:grid-cols-2">
+                <div>
+                    <div class="flex items-center pb-3 text-sm">
+                        <img class="pr-2 w-7" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAlCAYAAADIgFBEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANqSURBVHgBtZhdUtswEMdXMk2cFmbCCeobNDwwcXipc4JyA+AEbU8QOEHpCUhPQDlB0icyw4t7A98gnoFAwiTZ7iaO61iyHX/wn2EsW9LqJ2m1KwJQUmPbtp5te8BPKCkBJcQANYABFS36814BuoejkQcFVRgmBrJRKaBCMAkgpYFyw2SAlALKBbMjSGGgnWFyghQCkrs0ygJBgGFC11W/XY99JswOK3K1Pxp1l/SEkkCiLMiH0ehy8/Jo25c0u15C28wtE1WBVAEkqgQpCySqBikDJN4CpCiQeCuQnYFM8+hwOPT5JTzatXUHCyoEYR1Qv7RjX395udm8rFbmybbPqXADFYNElbZCBNsl6KEMiHp5QMiwA+kDK/VpK2QE48ugo6Vp09eBPLfbX2kGZ5Au57nT+aYDAsTf8e+UThzmkCDEqc6a1MzixbbPUIhrmuEvSNcQEX9we8WuEN91HQRxSIH4SalBvGvEYsCk0zkliD6XeX8hRfPp1OUnt48DsV1dYpXEwTAthUXKrcbj4+MWLpdJDq7o0HX9TXlJK/lE/bcHwDtlTHIV3qZmvGK5WHghCMWfd1IORKQdnpx8hBSNW61mZOCm2NsbRIGWiJ6mm5V5hdgDOBcx4Mf5/Ci1j2nGV6KJhnEKGWIYT/loGFZoR1/vQLpRxXFFxA45saV0EsKX2sEQv+iMRL6djR1H2V5WcIly4t+j4wgpPys2EV2G+aPp6GxuZquTgehvN8BmbTpV4girtl4VK/59bppuCIuobBk5+l/epqHOaD1ID3wyKLa4mia9+CkJJnCptKTTs0mGtaRoP5/3JccM3bnn1aEY0QvK2jAuDON2s4KRrK9ogdjn52Rt71wD6+4/PLirRLkOxXpDpD7dO67e0UoJjS8E8iAh47PPzeiaUJ/NehSVtVtLk72gS30/vM9M2u3bpNQA/53PgvzykGONJp4F4hx4wYUwzrzOZhe6kxOBsKCYrCQQHu+9aYa5KoRhR6XKbgpQpeJxVuMFjr0Fw+Ikxg10ab5K8YFpkB810i7kUfHtj29mWHx7NBToUxK+2r+/v9ZVZ/7jv7qSriOyo0uq5Jwu+YRLzxY9W1oAqqeg9vOgXh9GtyU3TFQUd6x5sFKUQD3TNP2ocaQUMZlMLEqKTbFY+IZh+I0cP4n8Axa2xF1zBuwJAAAAAElFTkSuQmCC" alt="">
+                        <span><b>LaslesVPN</b></span>
+                    </div>
+                    <div>
+                        <p class="text-xs"> <b>LaslesVPN</b> is a private virtual network that <br> has unique features
+                            and has high
+                            security.
+                        </p>
+                        <div class="flex  justify-start ">
+                            <img class="my-4 mr-4 bg-white p-1 w-7 h-7 shadow-2xl rounded-full "
+                                src="/assets/facebook-f.96eaa6d3.svg" alt="">
+                            <img class="my-4 mr-4 bg-white p-1 w-7 h-7 shadow-2xl rounded-full "
+                                src="/assets/twitter.551986b3.svg" alt="">
+                            <img class="my-4 mr-4 bg-white p-1 w-7 h-7 shadow-2xl rounded-full "
+                                src="/assets/instagram.3f25decf.svg" alt="">
+                        </div>
+                    </div>
+                    <p class="text-xs pb-12"> <span>&copy;</span>2020LaslesVPN</p>
+                </div>
+                <div class="">
+                    <div class="grid grid-cols-3 text-xs gap-2">
+                        <div class="space-y-3">
+                            <h6 class="font-bold">Product</h6>
+                            <p>Download</p>
+                            <p>Pricing</p>
+                            <p>Locations</p>
+                            <p>Servers</p>
+                            <p>Countries</p>
+                            <p>Blog</p>
+                        </div>
+                        <div class="space-y-3">
+                            <h6 class="font-bold">Engage</h6>
+                            <p>LaslesVPN?</p>
+                            <p>FAQ</p>
+                            <p>Tutorials</p>
+                            <p>About Us</p>
+                            <p>Privacy Policy</p>
+                            <p>Terms of Services</p>
+                        </div>
+                        <div class="space-y-3">
+                            <h6 class="font-bold">Earn Money</h6>
+                            <p>Affiliate</p>
+                            <p>Become Partner</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script>
+        new Glide('.glide').mount();
+    </script>
+
+    <script>
+        const config = {
+            type: "carousel",
+            perView: 3,
+            breakpoints: {
+                768: {
+                    perView: 1
+                },
+                1024: {
+                    perView: 2
+                }
+            }
+        };
+
+
+        new Glide(".glide", config).mount();
+    </script>
+
+
+</body>
+
+</html>
